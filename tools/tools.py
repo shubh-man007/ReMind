@@ -16,3 +16,4 @@ class Tool(ABC):
     @abstractmethod
     def run(self, input : Union[str, Dict[str, str]]) -> Dict[str, str]:
         pass
+        # Implemented _execute_tool method to execute tool locally.
