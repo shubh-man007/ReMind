@@ -66,7 +66,7 @@ flowchart TD
   REPORTER --> END
 
   %% Styling
-  classDef default fill:#f5f5f5,stroke:#444,stroke-width:1px,font-size:14px;
-  classDef control fill:#f5f5f5,stroke:#444,stroke-dasharray: 4 4;
+  classDef default fill:#e6e6e6,stroke:#333,stroke-width:1.2px,font-size:14px;
+  classDef control fill:#e0e0e0,stroke:#222,stroke-dasharray: 4 4,stroke-width:1.2px,font-size:14px;
   class PLANNER,REPORTER,END control;
 ```
