@@ -1,4 +1,3 @@
-# ReAct paper: https://arxiv.org/abs/2210.03629
 import json
 from typing import Dict, List, Any, Optional, Union
 from dataclasses import dataclass, field
@@ -11,14 +10,10 @@ from ..state.state import State
 class AgentState:
     """State object for the React agent."""
 
-    # Track conversation history
     messages: List[Dict[str, str]] = field(default_factory=list)
-    # Track intermediate steps (action, observation pairs)
     intermediate_steps: List[Dict[str, str]] = field(default_factory=list)
-    # Current action details
     action: Optional[str] = None
     action_input: Optional[Dict[str, Any]] = None
-    # Flag to determine if the agent is done
     is_done: bool = False
 
 
@@ -70,7 +65,6 @@ class ReactAgent:
             steps_text += f"Action Input: {step.get('action_input', '')}\n"
             steps_text += f"Observation: {step.get('observation', '')}\n"
 
-        # Construct the full prompt
         prompt = f"""{self.prompt}
 Human query: {agent_input}
 Follow this format:
@@ -97,13 +91,11 @@ Final Answer: The final answer to the original input question
         """
         result = {}
 
-        # Check if the response contains a final answer
         if "Final Answer:" in response:
             final_answer_idx = response.find("Final Answer:")
-            # Extract everything after "Final Answer:"
             final_answer = response[final_answer_idx + len("Final Answer:") :].strip()
             result["final_answer"] = final_answer
-            # Extract the last thought before final answer
+
             thought_match = response[:final_answer_idx].strip()
             if "Thought:" in thought_match:
                 last_thought_idx = thought_match.rfind("Thought:")
@@ -111,7 +103,6 @@ Final Answer: The final answer to the original input question
                     last_thought_idx + len("Thought:") :
                 ].strip()
         else:
-            # Extract Thought
             if "Thought:" in response:
                 thought_idx = response.find("Thought:")
                 action_idx = response.find("Action:")
@@ -120,7 +111,6 @@ Final Answer: The final answer to the original input question
                         thought_idx + len("Thought:") : action_idx
                     ].strip()
 
-            # Extract Action
             if "Action:" in response:
                 action_idx = response.find("Action:")
                 action_input_idx = response.find("Action Input:")
@@ -129,12 +119,10 @@ Final Answer: The final answer to the original input question
                         action_idx + len("Action:") : action_input_idx
                     ].strip()
 
-            # Extract Action Input
             if "Action Input:" in response:
                 action_input_idx = response.find("Action Input:")
                 observation_idx = response.find("Observation:")
 
-                # If observation isn't present yet (expecting it to be filled later)
                 if observation_idx == -1:
                     action_input_text = (
                         response[action_input_idx + len("Action Input:") :]
@@ -150,7 +138,6 @@ Final Answer: The final answer to the original input question
                         .strip('"')
                     )
 
-                # Try to parse as JSON if it looks like JSON
                 if (
                     action_input_text.startswith("{")
                     and action_input_text.endswith("}")
@@ -178,7 +165,6 @@ Final Answer: The final answer to the original input question
         Returns:
             Raw text response from the LLM
         """
-        # add stop to avoid LLM generating the observation as we want to use the tool
         response = self.llm_client.generate(
             prompt, system_prompt=self.prompt, stop=["Observation:"]
         )
@@ -219,18 +205,12 @@ Final Answer: The final answer to the original input question
         agent_state.messages.append({"role": "user", "content": agent_input})
         observations = workflow_state.get("observations", [])
 
-        # Main React loop
         for i in range(max_iterations):
-            # Create prompt with current state
             prompt = self._create_prompt(agent_input, agent_state.intermediate_steps)
-
-            # Get response from LLM
             llm_response = self._call_llm(prompt)
 
-            # Parse LLM response
             parsed_response = self._parse_llm_response(llm_response)
 
-            # Check if we have a final answer
             if "final_answer" in parsed_response:
                 agent_state.is_done = True
                 agent_state.messages.append(
@@ -238,12 +218,10 @@ Final Answer: The final answer to the original input question
                 )
                 break
 
-            # Extract thought, action, action_input
             thought = parsed_response.get("thought", "")
             action = parsed_response.get("action", "")
             action_input = parsed_response.get("action_input", "")
 
-            # Execute tool
             observation = self._execute_tool(action, action_input)
             print(f"thought: {thought}")
             print(f"action: {action}")
@@ -252,7 +230,7 @@ Final Answer: The final answer to the original input question
             print(f"react agent iter: {i}, max_iterations: {max_iterations}")
             print("--------------------------------")
             observations.append(observation)
-            # Record step
+
             step = {
                 "thought": thought,
                 "action": action,
@@ -261,7 +239,6 @@ Final Answer: The final answer to the original input question
             }
             agent_state.intermediate_steps.append(step)
 
-        # If we've hit max iterations without completion
         if not agent_state.is_done:
             agent_state.messages.append(
                 {
@@ -270,7 +247,6 @@ Final Answer: The final answer to the original input question
                 }
             )
 
-        # Prepare result
         result = {
             "messages": agent_state.messages,
             "intermediate_steps": agent_state.intermediate_steps,

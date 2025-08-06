@@ -1,6 +1,6 @@
 import io
 import sys
-from .tool import Tool
+from .tools import Tool
 
 
 class PythonREPLTool(Tool):

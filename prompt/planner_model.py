@@ -1,4 +1,4 @@
-# copy from https://github.com/bytedance/deer-flow/blob/main/src/prompts/planner_model.py
+# From https://github.com/bytedance/deer-flow/blob/main/src/prompts/planner_model.py
 
 from enum import Enum
 from typing import List, Optional
