@@ -4,14 +4,17 @@ from typing import Dict, Union
 
 class Tool(ABC):
     def __init__(self, tool_name : str, tool_description : str):
-        self.tool_name = tool_name
-        self.tool_description = tool_description
+        self.name = tool_name
+        self.description = tool_description
 
     def get_tool_name(self) -> str:
-        return self.tool_name
+        return self.name
+    
+    def get_description(self) -> str:
+        return self.description
     
     def get_metadata(self) -> Dict[str, str]:
-        return {"tool name" : self.tool_name, "tool_description" : self.tool_description}
+        return {"tool name" : self.name, "tool_description" : self.description}
     
     @abstractmethod
     def run(self, input : Union[str, Dict[str, str]]) -> Dict[str, str]:

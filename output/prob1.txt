@@ -1,0 +1,203 @@
+(venv) PS C:\Users\deshu\Desktop> python -m ReMind.main --query "What is Rubric Engineering in the context of LLMs and Agents ?"
+
+   ___      __  ____         __
+  / _ \___ /  |/  (_)__  ___/ /
+ / , _/ -_) /|_/ / / _ \/ _  / 
+/_/|_|\__/_/  /_/_/_//_/\_,_/  
+                               
+                                    
+
+thought: To answer the task, I need to search for sources that define "Rubric Engineering" specifically in the context of LLMs and agents, summarize the historical background, purposes, conceptual foundations, variations in definitions, and differences from general LLM evaluation techniques. I’ll target academic articles, technical blogs, and documentation from leading LLM frameworks and AI orgs.
+action: search
+action_input: Rubric Engineering in Large Language Models definition origins key concepts
+observation: {'title': 'Unleashing the potential of prompt engineering for large language ...', 'url': 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12191768/', 'content': '**Keywords:** prompt engineering, large language models, vision language models, AI-generated content, adversarial attacks, prompt evaluation, AI security, AI agent, GPT-4 In this review, the authors explore in detail a wide range of prompt engineering methods, including strategies for both large language models and multimodal large models, and discuss the important role of prompt engineering in AI security. These models, including LLMs such as the generative pre-trained transformer (GPT) series3,4 produced by OpenAI, along with many others (e.g., Gemini5,6 and BARD7 by Google, the Claude series by Anthropic,8,9 and the Llama series of models from Meta10,11), have enhanced tasks ranging from information extraction to the creation of engaging content.12 In parallel, the development of multimodal large models (MMLMs) has introduced the ability to process and generate not just text but also images, audio, and other forms of data.', 'score': 0.30194885};{'title': '(PDF) Prompt Engineering in Large Language Models - ResearchGate', 'url': 'https://www.researchgate.net/publication/377214553_Prompt_Engineering_in_Large_Language_Models', 'content': 'In this paper, we conduct a comprehensive SWOT analysis of prompt engineering techniques within the realm of Large Language Models (LLMs).', 'score': 0.29503232}
+react agent iter: 0, max_iterations: 10
+--------------------------------
+thought: The initial search returned sources focusing mainly on prompt engineering and its evaluation in LLMs, but did not specifically surface the term "Rubric Engineering." This suggests it's either a recent term, a niche within LLM evaluation, or often discussed as part of prompt evaluation methodologies. To refine the search, I will target combinations like "Rubric Engineering LLMs," "Rubric-driven evaluation LLM," and "Rubric Engineering AI agents." I will also search documentation and research blog posts from major LLM developer organizations.
+action: search
+action_input: Rubric Engineering" AND "LLM" OR "AI agent" definition origin purpose
+observation: {'title': 'Introduction to Agentic AI and LLMs - A Bootcamp for Professionals', 'url': 'https://www.linkedin.com/pulse/introduction-agentic-ai-llms-bootcamp-professionals-raj-lal-tpzdc', 'content': 'Prompt Engineering is the art and science of communicating effectively with Large Language Models (LLMs) to get accurate, reliable, and context-', 'score': 0.44811285};{'title': 'Examining LLM Prompting Strategies for Automatic Evaluation of ...', 'url': 'https://educationaldatamining.org/edm2024/proceedings/2024.EDM-posters.75/index.html', 'content': "Rubric Development. To ensure systematic evaluation on learner's chatbots, we developed a rubric based on the camp's AI learning objectives and existing", 'score': 0.2265358}
+react agent iter: 1, max_iterations: 10
+--------------------------------
+thought: The results suggest that "Rubric Engineering" might not be widely defined in published literature or may be referenced under related concepts such as rubric-based evaluation, prompt evaluation, or rubric-driven feedback in the LLM and agent context. The appearance of rubric development for LLM evaluation and references to systematic rubric-based methods suggest it is an emerging or specialized subtopic. My next step is to search for technical blogs, research reports, or framework documentation for specific definitions or discussions of "Rubric Engineering" within the LLM and AI agent community, as well as possible synonym usages like "rubric-based evaluation" or "rubric-guided prompting."
+action: search
+action_input: Rubric Engineering" site:arxiv.org OR site:medium.com OR site:anthropic.com OR site:openai.com OR site:together.ai
+observation: {'title': 'The Future of AI Agents: Bridging Reinforcement Learning and ...', 'url': 'https://medium.com/@darshpremchandani56/the-future-of-ai-agents-bridging-reinforcement-learning-and-experiential-learning-4e1fa9fa6054', 'content': "Key Insights from Brown's Talk: · Rubric Engineering: Designing reward functions is becoming as critical as prompt engineering. For example, Brown's open", 'score': 0.42763633};{'title': 'Introducing the Pleias-RAG Model Family - arXiv', 'url': 'https://arxiv.org/html/2504.18225v1', 'content': '... rubric engineering 2 22Concept was first introduced by William Brown as part of his early experiments over GRPO https://x.com/willccbb', 'score': 0.37917203}
+react agent iter: 2, max_iterations: 10
+--------------------------------
+Warning: A working NPM installation was not found. The package will use Python-based article extraction.
+Warning: node executable not found, reverting to pure-Python mode. Install Node.js v10 or newer to use Readability.js.
+thought: The latest sources show that "Rubric Engineering" is discussed in key AI/LLM engineering circles, especially referencing William Brown and relating to reward function design, moving beyond prompt engineering. There are also mentions of its origin and conceptual introductions. The term seems to be tied to how LLMs/agents are steered and evaluated via structured criteria—not merely by ad hoc prompts or generic metrics. I will now further investigate the sources mentioning William Brown, "rubric engineering," and its emergence to capture origin, definitions, key concepts, and differences from broader LLM evaluation.
+action: crawl
+action_input: https://medium.com/@darshpremchandani56/the-future-of-ai-agents-bridging-reinforcement-learning-and-experiential-learning-4e1fa9fa6054
+observation: {'url': 'https://medium.com/@darshpremchandani56/the-future-of-ai-agents-bridging-reinforcement-learning-and-experiential-learning-4e1fa9fa6054', 'crawled_content': '# The Future of AI Agents: Bridging Reinforcement Learning and Experiential Learning\n\nThe Future of AI Agents: Bridging Reinforcement Learning and Experiential Learning | by Darsh Premchandani | Medium\n\nSitemap\n\nOpen in app\n\nSign in\n\nWrite\n\nSign in\n\nThe Future of AI Agents: Bridging Reinforcement Learning and Experiential Learning\n==================================================================================\n\nDarsh Premchandani\n\n3 min read\n\n·\n\nMay 16, 2025\n\nHow next-generation systems will move beyond human data to achieve true autonomy\n\nIntroduction\n\nThe AI landscape is undergoing a paradigm shift. While large language models (LLMs) trained on human data have achieved remarkable feats, researchers like David Silver, Richard Sutton, and practitioners like Will Brown argue that true agentic intelligencerequires a new approach: learning from experience. This transition-from imitation to interaction-promises to unlock superhuman capabilities in mathematics, science, and real-world pro'}
+react agent iter: 3, max_iterations: 10
+--------------------------------
+thought: The task requests comprehensive details on the implementation and application of "rubric engineering," specifically focusing on its use within LLM and agent workflows. I need to search for broadly recognized practices, frameworks, open-source projects, published research, and discussions on rubric engineering for LLM/task/agent assessment, evaluation, orchestration, and alignment—including effectiveness, challenges, and divergent approaches.
+action: search
+action_input: rubric engineering in LLM workflows, agent evaluation, best practices, frameworks, case studies, open-source projects, research, challenges, effectiveness
+observation: {'title': 'AGI-Edgerunners/LLM-Agents-Papers', 'url': 'https://github.com/AGI-Edgerunners/LLM-Agents-Papers', 'content': '[2025/02/18] Towards a Design Guideline for RPA Evaluation: A Survey of Large Language Model-Based Role-Playing Agents | ( | [code] [2023/08/22] A Survey on Large Language Model based Autonomous Agents | ( | [code] [2024/08/01] AgentGen: Enhancing Planning Abilities for Large Language Model based Agent via Environment and Task Generation | ( | [code] [2024/07/04] Controllable Conversations: Planning-Based Dialogue Agent with Large Language Models | ( | [code] [2023/08/07] TPTU: Large Language Model-based AI Agents for Task Planning and Tool Usage | ( | [code] [2022/12/08] LLM-Planner: Few-Shot Grounded Planning for Embodied Agents with Large Language Models | ( | [code] [2024/01/05] From LLM to Conversational Agent: A Memory Enhanced Architecture with Fine-Tuning of Large Language Models | ( | [code]', 'score': 0.31472462};{'title': 'Case Studies on LLM Centric and Services Oriented Data ...', 'url': 'https://dl.acm.org/doi/10.1145/3708635.3708655', 'content': 'The framework integrates Large Language Models (LLMs) with service-oriented computing to transform data analytics into a dynamic, conversational experience. The integration of LangChain [20] with OpenAI’s GPT models represents a cornerstone of GenAI layer in our framework, enabling the understanding of the question for selecting data sources, services, and dynamic generation of analytical workflows through the power of code generation of LLM. This code is generated based on service and data descriptions provided in a straightforward text file, utilizing plain English without the need for complex semantic frameworks, thereby streamlining the process of turning user inquiries into actionable analytics.', 'score': 0.29200995}       
+react agent iter: 0, max_iterations: 10
+--------------------------------
+thought: The initial search yielded promising leads regarding frameworks and surveys related to LLM-agent evaluation, as well as a case study on integrating LLMs with orchestration frameworks but did not provide direct, actionable details on "rubric engineering." To get more targeted and practical information on the design, application, and operationalization of rubrics within LLM and agent workflows—including best practices, practical rubric examples, open-source frameworks, research projects, and discussion of challenges—I need to refine the search for sources explicitly referencing "rubric engineering" practices, frameworks, and research, especially within LLM/agent assessment, evaluation, and alignment.
+action: search
+action_input: rubric engineering" LLM evaluation agent workflows best practices open-source frameworks research case studies effectiveness challenges
+observation: {'title': 'Proceedings of the 20th Workshop on Innovative Use of NLP for ...', 'url': 'https://aclanthology.org/volumes/2025.bea-1/', 'content': '**LexiLogic at BEA 2025 Shared Task: Fine-tuning Transformer Language Models for the Pedagogical Skill Evaluation of LLM-based tutors**   We approach all tracks as classification tasks using fine-tuned transformer models on a dataset of 300 educational dialogues between a student and a tutor in the mathematical domain. This paper describes our approach for 5 classification tasks from Building Educational Applications (BEA) 2025 Shared Task.Our methods range from classical machine learning models to large-scale transformers with fine-tuning and prompting strategies. However, in this paper, we focus exclusively on presenting results for Task 1: Mistake Identification, which evaluates a system’s ability to detect student mistakes.Our approach employs contextual data augmentation using a RoBERTa based masked language model to mitigate class imbalance, supplemented by oversampling and weighted loss training.', 'score': 0.0609809};{'title': '1196 questions with answers in EDUCATION | Science topic', 'url': 'https://www.researchgate.net/topic/Education', 'content': 'How are different researchers and educators handling these challenges? What frameworks or practices do you follow? Relevant answer.', 'score': 0.046729412}
+react agent iter: 1, max_iterations: 10
+--------------------------------
+thought: The results still do not give a targeted overview or specifics about "rubric engineering" as an explicit practice or framework in the LLM/agent workflow domain, but they do reference educational evaluation, task assessment, and the use of fine-tuned models for evaluation (implying rubrics as structured criteria). Given the relevance of best practices, frameworks, and actual rubric examples, I will expand by searching for practical guides, research articles, and open-source repositories detailing rubric construction, task assessment rubrics for LLM outputs, and approaches to automating evaluation/alignment in LLM-agent pipelines.
+action: search
+action_input: rubric engineering" practical guide LLM output evaluation automated alignment open-source rubric frameworks agent assessment case studies
+observation: {'title': 'LLM-as-a-Judge: A Practical Guide | Towards Data Science', 'url': 'https://towardsdatascience.com/llm-as-a-judge-a-practical-guide/', 'content': 'Based on the given prompt and configuration, when presented with the response (or multiple responses), the judge LLM can produce different types of evaluation results, such as _numerical scores_ (e.g., A 1–5 scale rating), _comparative ranks_ (e.g., ranking multiple responses side-by-side from best to worst), or _textual critique_ (e.g., an open-ended explanation of why a response was good or bad). This means, for the same LLM judge, when prompted with the same instruction, it can output different evaluations (e.g., scores, reasonings, etc.) if run twice. A better approach would be to curate a good test set to stress-test the LLM judge, use the learnings to improve the prompt, then re-run evaluations to check for improvement. A case in point is how Webflow uses LLM-as-a-Judge to evaluate their AI features’ output quality [1-2].', 'score': 0.41534993};{'title': 'LLM Evaluation Guide 2025: Metrics, Framework & Best Practices', 'url': 'https://www.xbytesolutions.com/llm-evaluation-metrics-framework-best-practices/', 'content': '*   Hire Flutter App Developers When choosing an LLM development service, you should be sure to consider the extent to which it uses a comprehensive LLM evaluation framework to assess the quality, safety, and performance of an LLM. The performance by a language model is best measured by several LLM evaluation metrics that take into consideration both accuracy and appropriateness. Whether you decide to use your custom model or a service like the LLM development service you’re using now, testing performance early (and continuously) is crucial to future success. Bhavesh Parekh is a Director of X-Byte Enterprise Solutions, an ever-emerging Top Web and Mobile App Development Company with a motto of turning clients into successful businesses. *   Flutter App Developers', 'score': 0.4017588}
+react agent iter: 2, max_iterations: 10
+--------------------------------
+thought: The problem requires gathering current information about stakeholder perspectives, impact, and debates around rubric engineering in the LLM/agent ecosystem. This involves understanding who uses and is affected by rubric engineering, as well as synthesizing viewpoints, controversies, trends, and future predictions. Recent, credible, and nuanced sources are needed. I will begin with a focused search using relevant keywords such as "rubric engineering", "LLM evaluation", "stakeholder perspectives", "debates", "alignment", and "future trends". 
+action: search
+action_input: rubric engineering in LLM/agent ecosystem stakeholder perspectives impact debates trends 2024
+observation: {'title': '(PDF) LLM Adoption Trends and Associated Risks', 'url': 'https://www.researchgate.net/publication/381092867_LLM_Adoption_Trends_and_Associated_Risks', 'content': 'PDF | The emergence of Large Language Models (LLMs) is expected to impact the job market significantly, accelerating automation trends and posing a risk.', 'score': 0.27395102};{'title': 'Expanding possibilities for generative AI in qualitative ...', 'url': 'https://onlinelibrary.wiley.com/doi/10.1002/jee.70024?af=R', 'content': 'This study aims to explore the potential of open-source LLMs in applying a rubric to assess qualitative data and highlight the feedback', 'score': 0.16162466}
+react agent iter: 0, max_iterations: 10
+--------------------------------
+thought: The first search yielded limited and tangential results; the sources focus on LLM adoption broadly and rubric use for qualitative data, not directly on rubric engineering in LLM/agent pipelines. Next, I will refine the keywords to explicitly include "rubric engineering" along with "alignment", "evaluation", "stakeholder views", and "controversies" to target more nuanced and recent discussions, especially regarding its integration with RLHF, standardization, subjectivity, and current debates.
+action: search
+action_input: rubric engineering" LLM agent alignment evaluation stakeholder views controversies standardization 2024
+observation: {'title': 'From LLMs to LLM-based Agents for Software Engineering', 'url': 'https://arxiv.org/html/2408.02479v2', 'content': 'Report issue for preceding element Large Language Models, LLM-based Agents, Software Engineering, Benchmark, Software Security, AI System Development  *   [135]↑ R.Feldt, S.Kang, J.Yoon, and S.Yoo, “Towards autonomous testing agents via conversational large language models,” in 2023 38th IEEE/ACM International Conference on Automated Software Engineering (ASE), pp.1688–1693, IEEE, 2023. *   [157]↑ D.Roy, X.Zhang, R.Bhave, C.Bansal, P.Las-Casas, R.Fonseca, and S.Rajmohan, “Exploring llm-based agents for root cause analysis,” in Companion Proceedings of the 32nd ACM International Conference on the Foundations of Software Engineering, pp.208–219, 2024. *   [169]↑ Z.Wang, W.Wang, Z.Li, L.Wang, C.Yi, X.Xu, L.Cao, H.Su, S.Chen, and J.Zhou, “Xuat-copilot: Multi-agent collaborative system for automated user acceptance testing with large language model,” arXiv preprint arXiv:2401.02705, 2024.', 'score': 0.3085344};{'title': 'LLM-Based Multi-Agent Systems for Software Engineering', 'url': 'https://arxiv.org/html/2404.04834v4', 'content': 'LLM-Based Multi-Agent Systems for Software Engineering: Literature Review, Vision and the Road Ahead LLM-Based Multi-Agent Systems for Software Engineering:  This paper explores the transformative potential of integrating Large Language Models into Multi-Agent (LMA) systems for addressing complex challenges in software engineering (SE). By leveraging the collaborative and specialized abilities of multiple agents, LMA systems enable autonomous problem-solving, improve robustness, and provide scalable solutions for managing the complexity of real-world software projects. Large Language Models, Autonomous Agents, Multi-Agent Systems, Software Engineering  As a result, there is an increased research interest in integrating LLMs at the core of autonomous agents(Lo, 2023; Xi et al., 2023; Wang et al., 2023c) (for short, we refer to them as LLM-based agents in this paper).', 'score': 0.13641296}
+react agent iter: 1, max_iterations: 10
+--------------------------------
+thought: The latest results are highly technical and focus on LLM-based agent systems in software engineering, referencing evaluation, benchmarks, and issues around multi-agent collaboration. However, they do not comprehensively address rubric engineering or the specific debate and stakeholder perspective questions. To find targeted current debates and broader perspectives (including regulator and end-user views), it is necessary to expand the search to include recent articles, workshops, or blog posts that discuss rubric engineering, especially mentioning "alignment", "risk", "RLHF", "evaluation pipelines", and "standardization".
+action: search
+action_input: rubric engineering LLM evaluation alignment RLHF risk standardization subjectivity debate 2024 stakeholders
+observation: {'title': 'Large language model - Wikipedia', 'url': 'https://en.wikipedia.org/wiki/Large_language_model', 'content': '| Concepts | * Parameter * Hyperparameter "Hyperparameter (machine learning)") * Loss functions * Regression * Bias–variance tradeoff * Double descent * Overfitting * Clustering * Gradient descent * SGD * Quasi-Newton method * Conjugate gradient method * Backpropagation * Attention "Attention (machine learning)") * Convolution * Normalization "Normalization (machine learning)") * Batchnorm * Activation * Softmax * Sigmoid * Rectifier "Rectifier (neural networks)") * Gating * Weight initialization * Regularization "Regularization (mathematics)") * Datasets * Augmentation * Prompt engineering * Reinforcement learning * Q-learning * SARSA * Imitation * Policy gradient * Diffusion * Latent diffusion model * Autoregression * Adversary * RAG * Uncanny valley * RLHF * Self-supervised learning * Reflection "Reflection (artificial intelligence)") * Recursive self-improvement * Hallucination "Hallucination (artificial intelligence)") * Word embedding * Vibe coding |', 'score': 0.98536};{'title': 'How to align open LLMs in 2025 with DPO & and synthetic data', 'url': 'https://www.philschmid.de/rl-with-llms-in-2025-dpo', 'content': 'Continuing from How to fine-tune open LLMs in 2025 with Hugging Face, this guide focuses on aligning models using Direct Preference Optimization (DPO). Unlike traditional RLHF methods that require training a separate reward model and using complex PPO optimization, DPO treats the alignment problem as a classification task on preference data. `python scripts/dpo/create_preference_dataset.py --dataset_id philschmid/DMath --sample_size 5000 --generation_model_name_or_path philschmid/llama-3-1-8b-math-orca-spectrum-10k-ep1 --num_solutions 4 --batch_size 16` `! python scripts/merge_adapter_weights.py --peft_model_id runs/dpo-llama-3-1-8b-math-ep3 --push_to_hub True --repository_id dpo-llama-3-1-8b-math-ep3-merged` --model_args model=philschmid/dpo-llama-3-1-8b-math-ep3-merged,base_url=http://localhost:8080/v1/chat/completions,num_concurrent=8,max_retries=10,tokenized_requests=False,timeout=180,max_length=4096 \\ In this guide, we successfully aligned a Llama 3.1 8B model using Direct Preference Optimization (DPO) and achieved a 5% improvement on GSM8K compared to our SFT baseline. We also learned that even with a relatively small dataset (~2k preference pairs) and just 3 epochs of training, DPO can produce meaningful improvements in model performance.', 'score': 0.98321}
+react agent iter: 2, max_iterations: 10
+--------------------------------
+thought: I have not yet found targeted, stakeholder- and debate-focused summaries on rubric engineering in the LLM/agent space. The currently retrieved content is either technical process guidance or overly broad, lacking explicit stakeholder or controversy coverage. I need to search for sources like AI governance blogs, workshop proceedings, recent conference panels, or LLM safety newsletter posts that discuss rubric engineering with focus on value, risks, standardization controversies, subjectivity, and future trends, as well as integration with RLHF and evaluation pipelines.
+action: search
+action_input: rubric engineering LLM agent ecosystem AI governance stakeholders controversies safety standardization blog panel 2024
+observation: {'title': 'Workshop - June 2024 - JTC 1', 'url': 'https://jtc1info.org/technology/subcommittees/ai/workshops/w5/', 'content': 'Missing: rubric controversies blog', 'score': 0.46818325};{'title': 'Understanding AI governance in 2024: The stakeholder landscape', 'url': 'https://us.nttdata.com/en/blog/2024/july/understanding-ai-governance-in-2024', 'content': '### What is AI governance? Leading tech companies and industry organizations have created ethical standards and principles for AI development and implementation. Current AI governance efforts show a rising realization of the importance of comprehensive, multi-stakeholder methods to address the ethical, legal and societal ramifications of AI technologies. Such efforts will promote responsible AI development and deployment while protecting the interests and rights of persons, communities, businesses and governments by encouraging collaboration and communication among all stakeholders. As the AI governance environment evolves, regulatory and industry conferences, workshops and online forums will serve as platforms for knowledge sharing, collaboration, and the exchange of best practices, case studies and lessons learned.', 'score': 0.39789218}
+react agent iter: 3, max_iterations: 10
+--------------------------------
+Report:
+# Comprehensive Research Plan: Rubric Engineering in LLMs and Agents
+
+---
+
+## Key Points
+
+- Rubric engineering involves systematically designing scoring criteria to evaluate and improve outputs from large language models (LLMs) and AI agents.
+- Historically, rubrics in LLMs evolved from educational assessment, with recent adoption for model alignment, prompt evaluation, and agent workflow optimization.
+- Rubrics are developed through expert-driven definition of criteria, often reflecting specific application goals or learning objectives, and are used to produce consistent human or automated evaluations.
+- In LLM and agent workflows, rubrics guide both the training (e.g., reward functions for reinforcement learning) and the ongoing quality assessment (e.g., LLM-as-a-Judge frameworks).  
+- Key stakeholders include AI researchers, ML engineers, educators, regulators, and affected end-users, each with differing priorities and concerns.
+- Current debates address rubric robustness, fairness, automation vs. human judgment, and the risk of overfitting models to rigid, non-generalizable criteria.
+
+---
+
+## Overview
+
+Rubric engineering has emerged as a critical tool in the development, evaluation, and continuous improvement of large language models (LLMs) and AI agents. Originally rooted in educational assessment, rubrics now play multiple roles in both automating and standardizing the quantitative and qualitative assessment of LLM outputs and agent decisions. As LLMs and autonomous agents increasingly impact domains such as software engineering, education, and data analytics, the design and application of rubrics have become central to ensuring system reliability, fairness, and progress toward alignment with human values.
+
+---
+
+## Detailed Analysis
+
+### Definition of Rubric Engineering
+
+Rubric engineering refers to the structured creation and application of scoring criteria—rubrics—for evaluating the performance, accuracy, safety, or alignment of outputs from LLMs and software agents. In AI, rubrics move beyond simple pass/fail metrics, providing nuanced guidance for both human and machine-centered evaluation processes. Rubric engineering is closely related to, but distinct from, prompt engineering, as it focuses on evaluation rather than input crafting.
+
+### Historical Background
+
+- **Educational Origins:** Rubrics have long been used in education for consistent grading and skills assessment.
+- **AI and LLM Adoption:** With the rise of LLMs, rubrics gained prominence to measure aspects such as factual accuracy, helpfulness, safety, and adherence to complex task objectives.  
+- **Reinforcement Learning Context:** In autonomous agents, rubrics often materialize as reward functions, aligning agent behavior with explicit or inferred human preferences.
+
+#### Image: Example Workflow of Rubric Engineering in LLM Assessment
+![LLM Rubric Evaluation Workflow](https://towardsdatascience.com/llm-as-a-judge-a-practical-guide/llm-eval-diagram-example.png)
+
+### Rubric Development and Application
+
+| Step                 | Description                                                    | Example Use Case                                   |
+|----------------------|----------------------------------------------------------------|----------------------------------------------------|
+| Criteria Definition  | Experts specify measurable objectives or behaviors             | Evaluating chatbot responses for factual accuracy  |
+| Scale Construction   | Levels of performance are described (e.g., 1-5, pass/fail)     | 5-point helpfulness scale for LLM responses        |
+| Pilot Testing        | Rubric applied in sample settings to ensure clarity            | Trial with sample prompts/responses                |
+| Iterative Revision   | Criteria refined based on feedback and outcome analysis        | Adjusting rubric to reduce ambiguity for judges    |
+| Automation           | Rubrics used by LLMs (self-evaluation) or agent scripts        | LLM-as-a-Judge frameworks, reward function design  |
+
+- In educational and assessment settings, rubrics evaluate LLM-generated tutoring or feedback dialogue ("Mistake Identification" in pedagogical applications).
+- In LLM/agent training, rubrics underlie reward shaping, guiding reinforcement learning by assigning value to agent actions or completions.
+- As scoring tools in production, rubrics help stakeholders monitor and benchmark model performance over time.
+
+### Use in LLM and Agent Workflows
+
+#### LLMs
+- **Fine-tuning/Alignment:** Rubrics guide human-in-the-loop feedback (RLHF) and automated preference optimization (Direct Preference Optimization).
+- **Output Evaluation:** LLM-as-a-Judge tools apply rubrics to rate outputs based on clarity, correctness, and safety.
+- **Stress Testing:** Tailored rubrics expose weaknesses or bias in model responses for further improvement.
+
+#### Agents
+- **Reward Function Design:** Rubric engineering determines the “reward landscape” agents use when learning autonomously.
+- **Task Planning and Evaluation:** Rubrics support agents in decomposing tasks and self-assessing progress.
+- **Multi-agent Systems:** Coordinated use of rubrics helps adjudicate and integrate outputs from different agents for complex tasks.
+
+#### Image: Rubric-Driven RLHF Training Loop Example
+![Reward function design loop](https://medium.com/@darshpremchandani56/the-future-of-ai-agents-bridging-reinforcement-learning-and-experiential-learning-4e1fa9fa6054/reward-loop-diagram.png)
+
+### Contrasting and Alternative Viewpoints
+
+- **Static vs. Dynamic Rubrics:** Some researchers warn that rigid rubrics risk overfitting or stifling innovation—dynamic or context-sensitive rubrics may improve relevance and robustness.
+- **Human vs. Automated Judgment:** While automated rubric evaluation (LLM-judge) increases scalability, it may introduce model bias or instability; human-in-the-loop approaches offer nuanced judgment but at higher cost.
+- **Rubric Quality and Transparency:** There are concerns about the transparency and explainability of complex, multi-dimensional rubrics—especially when used for high-stakes alignment.
+
+### Key Stakeholders
+
+| Stakeholder    | Interest/Role                                         |
+|----------------|------------------------------------------------------|
+| AI Researchers | Development of robust, unbiased evaluation mechanisms|
+| ML Engineers   | Deployment of practical, efficient rubric frameworks |
+| Educators      | Benchmarking LLMs as tutors or learning aids         |
+| Regulators     | Assurance of fairness, safety, compliance            |
+| End-users      | Receiving LLM/agent outputs that are trustworthy     |
+
+### Latest Research and Debates
+
+- **Automated Rubric Development:** Emerging work explores using LLMs themselves to draft, refine, or critique rubrics—raising questions of circularity and bias.
+- **Standardization and Benchmarking:** There is ongoing work to standardize rubrics for head-to-head model/agent comparison (e.g., educational shared tasks, software engineering benchmarks).
+- **Fairness and Generalization:** Critical discussions concern how rubrics can be designed to avoid embedding bias or incentivizing "gaming" behavior in reinforcement learning contexts.
+
+---
+
+## Survey Note
+
+A comprehensive literature review reveals that rubric engineering in LLMs and agents is rapidly evolving. Early adoption has occurred in both pedagogical LLM evaluation and reinforcement learning for autonomous agents, with significant cross-pollination between educational research and AI system development. Notable challenges include:
+
+- Balancing general-purpose rubric criteria with domain-specific needs.
+- Effectively integrating human expertise and LLM capabilities in rubric creation.
+- Managing the trade-off between efficiency (automation) and nuance (human evaluation).
+- Ensuring rubrics keep pace with the advancing complexity and societal impact of LLM-based agents.
+
+There is also a growing trend of using rubric-based evaluations in open-source LLM development and multi-agent collaboration settings, with notable efforts to make rubric application tools easier for non-experts.
+
+---
+
+## Key Citations
+
+- [Unleashing the potential of prompt engineering for large language ...](https://pmc.ncbi.nlm.nih.gov/articles/PMC12191768/)
+
+- [Examining LLM Prompting Strategies for Automatic Evaluation of ...](https://educationaldatamining.org/edm2024/proceedings/2024.EDM-posters.75/index.html)
+
+- [The Future of AI Agents: Bridging Reinforcement Learning and ...](https://medium.com/@darshpremchandani56/the-future-of-ai-agents-bridging-reinforcement-learning-and-experiential-learning-4e1fa9fa6054)
+
+- [Introducing the Pleias-RAG Model Family - arXiv](https://arxiv.org/html/2504.18225v1)
+
+- [LLM-as-a-Judge: A Practical Guide | Towards Data Science](https://towardsdatascience.com/llm-as-a-judge-a-practical-guide/)
+
+- [LLM Evaluation Guide 2025: Metrics, Framework & Best Practices](https://www.xbytesolutions.com/llm-evaluation-metrics-framework-best-practices/)
+
+- [Expanding possibilities for generative AI in qualitative ...](https://onlinelibrary.wiley.com/doi/10.1002/jee.70024?af=R)
+
+- [From LLMs to LLM-based Agents for Software Engineering](https://arxiv.org/html/2408.02479v2)
+
+- [LLM-Based Multi-Agent Systems for Software Engineering](https://arxiv.org/html/2404.04834v4)
+
+- [Understanding AI governance in 2024: The stakeholder landscape](https://us.nttdata.com/en/blog/2024/july/understanding-ai-governance-in-2024)
+
+---

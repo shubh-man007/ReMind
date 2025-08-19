@@ -1,5 +1,12 @@
 # ReMind
 
+```
+   ___      __  ____         __
+  / _ \___ /  |/  (_)__  ___/ /
+ / , _/ -_) /|_/ / / _ \/ _  / 
+/_/|_|\__/_/  /_/_/_//_/\_,_/  
+```
+
 ReMind is a research workflow prototype inspired by OpenAI’s [Deep Research](https://openai.com/index/introducing-deep-research/) and ByteDance’s [DeerFlow](https://github.com/bytedance/deer-flow). This implementation of the core logic does not leverage any kind of external library like langgraph or agentic abstraction
 
 Currently, the project is backend-only and does not include a frontend or UI.
@@ -44,6 +51,10 @@ The state machine logic is implemented in `state_machine.py` and governs the flo
 - **Coder**: A ReAct agent capable of performing analysis and computation using Python  
 - **Reporter**: Synthesizes results into a final structured report  
 
+## Result
+
+- The output for the query `python -m ReMind.main --query "What is Rubric Engineering in the context of LLMs and Agents ?"` is in the output directory. 
+- The output contains reports and citations.
 
 ```mermaid
 flowchart TD
