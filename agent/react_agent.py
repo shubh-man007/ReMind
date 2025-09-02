@@ -8,7 +8,6 @@ from ..state.state import State
 
 @dataclass
 class AgentState:
-    """State object for the React agent."""
 
     messages: List[Dict[str, str]] = field(default_factory=list)
     intermediate_steps: List[Dict[str, str]] = field(default_factory=list)
