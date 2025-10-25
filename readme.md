@@ -25,7 +25,7 @@ To run ReMind, set the following API keys as environment variables:
 From the root directory, execute the following command:
 
 ```bash
-python3 -m ReMind.main --query "<research-statement>"
+python -m ReMind.main --query "<research-statement>"
 ```
 
 ## ReAct Agent Design
